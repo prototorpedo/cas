@@ -69,7 +69,8 @@ class CasManager {
 		phpCAS::setServerLogoutURL( $this->config['cas_logout_url'] );
 
         $serverBaseURL = 'https://' . $this->config['cas_hostname'] . $this->config['cas_uri']
-            .'/serviceValidate' . $this->config['cas_service_validate_query'];
+            .'/' . $this->config['cas_service_type'] . $this->config['cas_service_validate_query'];
+
         phpCAS::setServerServiceValidateURL($serverBaseURL);
 	}
 
